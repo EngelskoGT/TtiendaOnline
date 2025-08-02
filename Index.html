@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Maquetación con Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .cart-icon-container {
+            position: relative;
+            display: inline-block;
+        }
+        .cart-counter {
+            position: absolute;
+            top: 5px; /* Valor ajustado para bajarlo */
+            right: 5px; /* Valor ajustado para centrarlo mejor */
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            line-height: 1;
+        }
+        /* Estilo para que las imágenes del carrusel se vean completas */
+        .carousel-item img {
+            max-height: 350px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container-fluid p-0">
+        <div class="position-relative">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/carousel-1.jpg" class="d-block mx-auto" alt="Imagen del carrusel 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-2.jpg" class="d-block mx-auto" alt="Imagen del carrusel 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-3.jpg" class="d-block mx-auto" alt="Imagen del carrusel 3">
+                    </div>
+                </div>
+            </div>
+            <div class="cart-icon-container position-absolute top-0 end-0 p-3" style="z-index: 10;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <span class="cart-counter">1</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-sm-3 mb-4">
+                <h4 class="fw-bold mb-3">Categorías</h4>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Categoría 1</a>
+                    <a href="#" class="list-group-item list-group-item-action">Categoría 2</a>
+                    <a href="#" class="list-group-item list-group-item-action">Categoría 3</a>
+                    <a href="#" class="list-group-item list-group-item-action">Categoría 4</a>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300x200?text=Producto+1" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto 1</h5>
+                                <p class="card-text">Descripción breve del producto.</p>
+                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300x200?text=Producto+2" class="card-img-top" alt="Producto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto 2</h5>
+                                <p class="card-text">Descripción breve del producto.</p>
+                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300x200?text=Producto+3" class="card-img-top" alt="Producto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto 3</h5>
+                                <p class="card-text">Descripción breve del producto.</p>
+                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300x200?text=Producto+4" class="card-img-top" alt="Producto 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto 4</h5>
+                                <p class="card-text">Descripción breve del producto.</p>
+                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300x200?text=Producto+5" class="card-img-top" alt="Producto 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto 5</h5>
+                                <p class="card-text">Descripción breve del producto.</p>
+                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300x200?text=Producto+6" class="card-img-top" alt="Producto 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto 6</h5>
+                                <p class="card-text">Descripción breve del producto.</p>
+                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-3 mt-5">
+        <p class="mb-0">Diseñado por: Engelber Venceslav Cifuentes Morán - 1890-22-15397</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
