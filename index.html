@@ -13,8 +13,8 @@
         }
         .cart-counter {
             position: absolute;
-            top: 5px; /* Valor ajustado para bajarlo */
-            right: 5px; /* Valor ajustado para centrarlo mejor */
+            top: 5px;
+            right: 5px;
             background-color: red;
             color: white;
             border-radius: 50%;
@@ -27,6 +27,14 @@
             max-height: 350px;
             width: auto;
             object-fit: contain;
+        }
+        /* CLASES PARA EL EFECTO HOVER EN LOS PRODUCTOS */
+        .card-img-zoom {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .card:hover .card-img-zoom {
+            transform: scale(1.50);
         }
     </style>
 </head>
@@ -51,7 +59,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
-                <span class="cart-counter">1</span>
+                <span id="cart-counter" class="cart-counter">0</span>
             </div>
         </div>
     </header>
@@ -69,67 +77,8 @@
             </div>
 
             <div class="col-sm-9">
-                <div class="row g-4">
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/300x200?text=Producto+1" class="card-img-top" alt="Producto 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre del producto 1</h5>
-                                <p class="card-text">Descripción breve del producto.</p>
-                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/300x200?text=Producto+2" class="card-img-top" alt="Producto 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre del producto 2</h5>
-                                <p class="card-text">Descripción breve del producto.</p>
-                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/300x200?text=Producto+3" class="card-img-top" alt="Producto 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre del producto 3</h5>
-                                <p class="card-text">Descripción breve del producto.</p>
-                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/300x200?text=Producto+4" class="card-img-top" alt="Producto 4">
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre del producto 4</h5>
-                                <p class="card-text">Descripción breve del producto.</p>
-                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/300x200?text=Producto+5" class="card-img-top" alt="Producto 5">
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre del producto 5</h5>
-                                <p class="card-text">Descripción breve del producto.</p>
-                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <img src="https://via.placeholder.com/300x200?text=Producto+6" class="card-img-top" alt="Producto 6">
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre del producto 6</h5>
-                                <p class="card-text">Descripción breve del producto.</p>
-                                <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="productos-container" class="row g-4">
+                    <p class="text-center text-muted">Cargando productos...</p>
                 </div>
             </div>
         </div>
@@ -140,5 +89,6 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/productos.js"></script>
 </body>
 </html>
